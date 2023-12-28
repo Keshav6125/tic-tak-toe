@@ -110,7 +110,7 @@
 }
 
 /* Media Query for Mobile Phones */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (min-width:100) {
   .wrapper {
       background-size: auto; /* Adjust background size for smaller screens */
   }
@@ -126,7 +126,24 @@
   }
 
   /* Adjust background size for smaller screensdd */
+   
+}
+
+@media only screen and  (max-width:100) {
   .wrapper {
-      background-size: auto;
+      background-size: auto; /* Adjust background size for smaller screens */
   }
+
+  .player-info,
+  .btn,
+  .tic-tak {
+      width: 80%; /* Adjust the width for better mobile display */
+  }
+
+  .box {
+      font-size: 2rem; /* Adjust font size for better mobile display */
+  }
+
+  /* Adjust background size for smaller screensdd */
+   
 }
