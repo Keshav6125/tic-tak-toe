@@ -1,149 +1,90 @@
-* {
+*,*::before,*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', 'sans-serif';
 }
 
-.wrapper {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  background-image: url('background.webp');
-  height: 100vh;
+.wrapper{
   width: 100vw;
+  height: 100vh;
+  background-image: url(background.webp);
   background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
 }
 
-.player-info {
-  border: 2px solid silver;
-  height: 2em;
-  width: 9em;
-  top: 3em;
-  position: relative;
-  border-radius: 40px;
-  background: linear-gradient(to left, blue, purple);
-  color: antiquewhite;
-  text-align: center;
-  padding: 5px 10px;
-  box-shadow: 0 0 20px skyblue;
-  transition: 1s;
-}
-
-.player-info:hover {
-  scale: 1.5;
-}
-
-.btn {
-  border: 2px solid silver;
-  height: 2em;
-  width: 9em;
-  margin-bottom: 50px;
-  border-radius: 40px;
-  background: linear-gradient(to left, blue, purple);
-  color: antiquewhite;
-  text-align: center;
-  padding: 3px 8px;
-  opacity: 0;
-  box-shadow: 0 0 20px skyblue;
-  transition: 1s;
-}
-
-.btn:hover {
-  scale: 1.5;
-}
-
-.btn.active {
-  opacity: 1;
-}
-
-.tic-tak {
-  max-width: 20rem;
-  width: 90%;
-  position: relative;
-  border: 2px solid silver;
-  height: 19rem;
-  width: 19rem;
-  background-color: rgb(255, 255, 255, 0.15);
+.player-info{
+  color:white;
+  position:absolute;
+  top:3rem;
+  left:50%;
+  transform:translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 1rem;
-  border: 1px solid rgb(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 3rem;
+  /* text-align:center; */
+
+}
+
+.tic-tak{
+  width:90%;
+  max-width:20rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  top: 2em;
-  padding: 2em;
+  aspect-ratio: 1/1;
 }
 
-.box {
-  position: relative;
-  width: 100%;
+
+.box{
+  position:relative;
+  width:100%;
   aspect-ratio: 1/1;
   cursor: pointer;
   font-size: 3rem;
-  color: white;
+  color:white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.box1,
-.box2,
-.box4,
-.box5 {
-  border-right: 2px solid silver;
-  border-bottom: 2px solid silver;
+.box1, .box2, .box4, .box5{
+  border-right:2px solid white;
+  border-bottom:2px solid white;
 }
 
-.box3,
-.box6 {
-  border-bottom: 2px solid silver;
+.box3, .box6{
+  border-bottom: 2px solid white;
 }
 
-.box8 {
-  border-right: 2px solid silver;
-  border-left: 2px solid silver;
+.box7, .box8{
+  border-right:2px solid white;
 }
 
-.win {
-  background-color: rgb(0, 255, 0, 0.3);
+.btn{
+  color:white;
+  position: absolute;
+  bottom:3rem;
+  left:50%;
+  transform:translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem;
+  cursor:pointer;
+  display: none;
 }
 
-/* Media Query for Mobile Phones */
-@media only screen and (max-width: 600px) and (min-width:100) {
-  .wrapper {
-      background-size: auto; /* Adjust background size for smaller screens */
-  }
-
-  .player-info,
-  .btn,
-  .tic-tak {
-      width: 80%; /* Adjust the width for better mobile display */
-  }
-
-  .box {
-      font-size: 2rem; /* Adjust font size for better mobile display */
-  }
-
-  /* Adjust background size for smaller screensdd */
-   
+.btn.active{
+  display: flex;
 }
 
-@media only screen and  (max-width:100) {
-  .wrapper {
-      background-size: auto; /* Adjust background size for smaller screens */
-  }
-
-  .player-info,
-  .btn,
-  .tic-tak {
-      width: 80%; /* Adjust the width for better mobile display */
-  }
-
-  .box {
-      font-size: 2rem; /* Adjust font size for better mobile display */
-  }
-
-  /* Adjust background size for smaller screensdd */
-   
+.win{
+  background-color: rgba(0, 255, 0, 0.3);
 }
