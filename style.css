@@ -25,8 +25,16 @@
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 0.5rem 3rem;
-  /* text-align:center; */
+  background: linear-gradient(to left, blue, purple);
+  color: antiquewhite;
+  text-align: center;
+  padding: 5px 10px;
+  box-shadow: 0 0 20px skyblue;
+  transition: 1s;
+}
 
+.player-info:hover {
+  scale: 1.5;
 }
 
 .tic-tak{
@@ -39,6 +47,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 1/1;
+  box-shadow: 0 0 20px skyblue;
 }
 
 
@@ -79,6 +88,16 @@
   padding: 0.5rem 2rem;
   cursor:pointer;
   display: none;
+  background: linear-gradient(to left, blue, purple);
+  color: antiquewhite;
+  text-align: center;
+  padding: 5px 10px;
+  box-shadow: 0 0 20px skyblue;
+  transition: 1s;
+}
+
+.btn:hover {
+  scale: 1.5;
 }
 
 .btn.active{
